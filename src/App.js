@@ -1,7 +1,13 @@
 import "./App.css";
+import Header from "./Header/Header";
 
 function App() {
-  return <h1 className="text-4xl italic text-center">Hello world</h1>;
+    return (
+        <div className="container m-auto">
+            <Header />
+            {/*  */}
+        </div>
+    );
 }
 
 export default App;
