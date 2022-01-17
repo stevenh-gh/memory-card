@@ -5,9 +5,9 @@ beforeEach(() => {
     render(<Header />);
 });
 
-it.skip("should have a score", () => {
-    const score = screen.getByLabelText(/score/i);
-    expect(score).toBeInTheDocument();
+it("should have a title", () => {
+    const header = screen.getByRole("heading", { level: 1 });
+    expect(header).toBeInTheDocument;
 });
 
 it("should have a score", () => {
