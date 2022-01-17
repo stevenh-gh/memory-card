@@ -10,7 +10,12 @@ it.skip("should have a score", () => {
     expect(score).toBeInTheDocument();
 });
 
-it.skip("should have best score", () => {
-    const bestScore = screen.getByLabelText(/best score/i);
+it("should have a score", () => {
+    const score = screen.getAllByText(/score/i);
+    expect(score[0]).toBeInTheDocument();
+});
+
+it("should have best score", () => {
+    const bestScore = screen.getByText(/best score/i);
     expect(bestScore).toBeInTheDocument();
 });
