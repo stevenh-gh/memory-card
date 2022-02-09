@@ -1,12 +1,12 @@
 import "./App.css";
-import Card from "./Card/Card";
+import CardGrid from "./CardGrid/CardGrid";
 import Header from "./Header/Header";
 
 function App() {
     return (
         <div className="container m-auto">
             <Header />
-            <Card />
+            <CardGrid />
         </div>
     );
 }
