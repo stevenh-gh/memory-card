@@ -2,7 +2,8 @@ import { render, screen } from "@testing-library/react";
 import Card from "./Card";
 
 beforeEach(() => {
-    render(<Card url="example-link" />);
+    const obj = { url: "https://picsum.photos/200/300", name: "random-img" };
+    render(<Card char={obj} />);
 });
 
 it("is an image", () => {
@@ -16,6 +17,6 @@ it("has a src for the image", () => {
 });
 
 it("is inline block", () => {
-    const image = screen.getByRole("img");
-    expect(image).toHaveClass("inline-block");
+    const div = screen.getByRole("img").parentNode;
+    expect(div).toHaveClass("inline-block");
 });
