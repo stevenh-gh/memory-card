@@ -1,9 +1,10 @@
 const Card = (props) => {
-    const { url } = props;
+    const { char } = props;
     return (
-        <>
-            <img className="inline-block" src={url} />
-        </>
+        <div className="inline-block">
+            <img src={char.url} />
+            <div>{char.name}</div>
+        </div>
     );
 };
 export default Card;
