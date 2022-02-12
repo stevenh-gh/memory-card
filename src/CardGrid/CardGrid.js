@@ -41,6 +41,16 @@ const CardGrid = () => {
         },
     ]);
 
+    const shuffle = (e) => {
+        setCharList(
+            charList
+                .map((val) => ({ val, sort: Math.random() }))
+                .sort((a, b) => a.sort - b.sort)
+                .map(({ val }) => val)
+        );
+        console.log(e.target.nextSibling.innerText);
+    };
+
     const renderCard = (char) => {
         return <Card char={char} />;
     };
