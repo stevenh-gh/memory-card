@@ -52,7 +52,7 @@ const CardGrid = () => {
     };
 
     const renderCard = (char) => {
-        return <Card char={char} />;
+        return <Card char={char} onClick={shuffle} />;
     };
     return (
         <div className="text-center">
