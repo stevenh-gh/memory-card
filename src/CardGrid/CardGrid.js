@@ -46,28 +46,19 @@ const CardGrid = () => {
     return (
         <div className="text-center">
             <div className="card-row">
-                {renderCard(charList[0]
-                )}
-                {renderCard(charList[1]
-                )}
-                {renderCard(charList[2]
-                )}
+                {renderCard(charList[0])}
+                {renderCard(charList[1])}
+                {renderCard(charList[2])}
             </div>
             <div className="card-row">
-                {renderCard(charList[3]
-                )}
-                {renderCard(charList[4]
-                )}
-                {renderCard(charList[5]
-                )}
+                {renderCard(charList[3])}
+                {renderCard(charList[4])}
+                {renderCard(charList[5])}
             </div>
             <div className="card-row">
-                {renderCard(charList[6]
-                )}
-                {renderCard(charList[7]
-                )}
-                {renderCard(charList[8]
-                )}
+                {renderCard(charList[6])}
+                {renderCard(charList[7])}
+                {renderCard(charList[8])}
             </div>
         </div>
     );
