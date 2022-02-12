@@ -1,7 +1,8 @@
+import { useState } from "react";
 import Card from "../Card/Card";
 
 const CardGrid = () => {
-    const charList = [
+    const [charList, setCharList] = useState([
         {
             url: "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Character_Eula_Thumb.png",
             name: "Eula",
@@ -38,7 +39,7 @@ const CardGrid = () => {
             url: "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Character_Zhongli_Thumb.png/",
             name: "Zhongli",
         },
-    ];
+    ]);
 
     const renderCard = (char) => {
         return <Card char={char} />;
