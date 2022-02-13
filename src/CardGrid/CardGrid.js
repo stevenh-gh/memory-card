@@ -43,6 +43,7 @@ const CardGrid = () => {
 
     const [score, setScore] = useState(0);
     const [bestScore, setBestScore] = useState(0);
+    const handleClick = (e) => {
         setCharList(
             charList
                 .map((val) => ({ val, sort: Math.random() }))
@@ -53,7 +54,7 @@ const CardGrid = () => {
     };
 
     const renderCard = (char) => {
-        return <Card char={char} onClick={shuffle} />;
+        return <Card char={char} onClick={handleClick} />;
     };
     return (
         <>
