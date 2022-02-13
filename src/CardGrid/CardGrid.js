@@ -43,6 +43,8 @@ const CardGrid = () => {
 
     const [score, setScore] = useState(0);
     const [bestScore, setBestScore] = useState(0);
+    const [clicked, setClicked] = useState([]);
+
     const handleClick = (e) => {
         setCharList(
             charList
@@ -50,7 +52,18 @@ const CardGrid = () => {
                 .sort((a, b) => a.sort - b.sort)
                 .map(({ val }) => val)
         );
-        console.log(e.target.nextSibling.innerText);
+        const clickedChar = e.target.nextSibling.innerText;
+        if (!clicked.includes(clickedChar)) {
+            setScore(score + 1);
+            setClicked(clicked.concat([clickedChar]));
+            console.log(clicked);
+        } else {
+            setScore(0);
+            setClicked([]);
+        }
+        if (score > bestScore) {
+            setBestScore(score);
+        }
     };
 
     const renderCard = (char) => {
