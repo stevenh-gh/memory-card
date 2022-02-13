@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Card from "../Card/Card";
 
 const CardGrid = () => {
@@ -56,40 +56,43 @@ const CardGrid = () => {
         if (!clicked.includes(clickedChar)) {
             setScore(score + 1);
             setClicked(clicked.concat([clickedChar]));
-            console.log(clicked);
         } else {
             setScore(0);
             setClicked([]);
         }
+    };
+
+    useEffect(() => {
         if (score > bestScore) {
             setBestScore(score);
         }
-    };
+    }, [score, bestScore]);
 
     const renderCard = (char) => {
         return <Card char={char} onClick={handleClick} />;
     };
+
     return (
         <>
             <div>Score: {score}</div>
             <div>Best score: {bestScore}</div>
-        <div className="text-center">
-            <div className="card-row">
-                {renderCard(charList[0])}
-                {renderCard(charList[1])}
-                {renderCard(charList[2])}
+            <div className="text-center">
+                <div className="card-row">
+                    {renderCard(charList[0])}
+                    {renderCard(charList[1])}
+                    {renderCard(charList[2])}
+                </div>
+                <div className="card-row">
+                    {renderCard(charList[3])}
+                    {renderCard(charList[4])}
+                    {renderCard(charList[5])}
+                </div>
+                <div className="card-row">
+                    {renderCard(charList[6])}
+                    {renderCard(charList[7])}
+                    {renderCard(charList[8])}
+                </div>
             </div>
-            <div className="card-row">
-                {renderCard(charList[3])}
-                {renderCard(charList[4])}
-                {renderCard(charList[5])}
-            </div>
-            <div className="card-row">
-                {renderCard(charList[6])}
-                {renderCard(charList[7])}
-                {renderCard(charList[8])}
-            </div>
-        </div>
         </>
     );
 };
