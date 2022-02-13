@@ -1,10 +1,4 @@
 const Header = () => {
-    return (
-        <>
-            <h1>Memory card game (placeholder)</h1>
-            <div>Score: 0</div>
-            <div>Best score: 0</div>
-        </>
-    );
+    return <h1>Memory card game (placeholder)</h1>;
 };
 export default Header;
