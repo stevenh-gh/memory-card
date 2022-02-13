@@ -41,7 +41,8 @@ const CardGrid = () => {
         },
     ]);
 
-    const shuffle = (e) => {
+    const [score, setScore] = useState(0);
+    const [bestScore, setBestScore] = useState(0);
         setCharList(
             charList
                 .map((val) => ({ val, sort: Math.random() }))
@@ -55,6 +56,9 @@ const CardGrid = () => {
         return <Card char={char} onClick={shuffle} />;
     };
     return (
+        <>
+            <div>Score: {score}</div>
+            <div>Best score: {bestScore}</div>
         <div className="text-center">
             <div className="card-row">
                 {renderCard(charList[0])}
@@ -72,6 +76,7 @@ const CardGrid = () => {
                 {renderCard(charList[8])}
             </div>
         </div>
+        </>
     );
 };
 export default CardGrid;
