@@ -1,4 +1,4 @@
 const Header = () => {
-    return <h1>Memory card game (placeholder)</h1>;
+    return <h1 className="text-2xl">Genshin Memory Game</h1>;
 };
 export default Header;
