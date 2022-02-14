@@ -39,6 +39,54 @@ const CardGrid = () => {
             url: "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Character_Zhongli_Thumb.png/",
             name: "Zhongli",
         },
+        {
+            url: "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Character_Amber_Thumb.png",
+            name: "Amber",
+        },
+        {
+            url: "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Character_Barbara_Thumb.png",
+            name: "Barbara",
+        },
+        {
+            url: "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Character_Bennett_Thumb.png",
+            name: "Bennett",
+        },
+        {
+            url: "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Character_Gorou_Thumb.png",
+            name: "Gorou",
+        },
+        {
+            url: "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Character_Jean_Thumb.png",
+            name: "Jean",
+        },
+        {
+            url: "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Character_Mona_Thumb.png",
+            name: "Mona",
+        },
+        {
+            url: "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Character_Raiden_Shogun_Thumb.png",
+            name: "Raiden Shogun",
+        },
+        {
+            url: "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Character_Venti_Thumb.png",
+            name: "Venti",
+        },
+        {
+            url: "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Character_Razor_Thumb.png",
+            name: "Razor",
+        },
+        {
+            url: "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Character_Noelle_Thumb.png",
+            name: "Noelle",
+        },
+        {
+            url: "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Character_Qiqi_Thumb.png",
+            name: "Qiqi",
+        },
+        {
+            url: "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Character_Albedo_Thumb.png",
+            name: "Albedo",
+        },
     ]);
 
     const [score, setScore] = useState(0);
@@ -81,16 +129,28 @@ const CardGrid = () => {
                     {renderCard(charList[0])}
                     {renderCard(charList[1])}
                     {renderCard(charList[2])}
-                </div>
-                <div className="card-row">
                     {renderCard(charList[3])}
                     {renderCard(charList[4])}
                     {renderCard(charList[5])}
+                    {renderCard(charList[6])}
                 </div>
                 <div className="card-row">
-                    {renderCard(charList[6])}
                     {renderCard(charList[7])}
                     {renderCard(charList[8])}
+                    {renderCard(charList[9])}
+                    {renderCard(charList[10])}
+                    {renderCard(charList[11])}
+                    {renderCard(charList[12])}
+                    {renderCard(charList[13])}
+                </div>
+                <div className="card-row">
+                    {renderCard(charList[14])}
+                    {renderCard(charList[15])}
+                    {renderCard(charList[16])}
+                    {renderCard(charList[17])}
+                    {renderCard(charList[18])}
+                    {renderCard(charList[19])}
+                    {renderCard(charList[20])}
                 </div>
             </div>
         </>
